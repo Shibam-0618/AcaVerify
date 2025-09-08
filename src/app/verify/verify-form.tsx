@@ -12,6 +12,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { handleVerification } from './actions';
 import type { SimulateVerificationOutput } from '@/ai/flows/simulate-verification-results';
 import { Loader2, CheckCircle2, XCircle, Upload } from 'lucide-react';
+import React from 'react';
 
 const formSchema = z.object({
   certificateId: z.string().min(1, 'Certificate ID is required'),
