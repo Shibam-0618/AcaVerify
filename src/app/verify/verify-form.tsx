@@ -143,7 +143,7 @@ export function VerifyForm() {
                     'Verify'
                     )}
                 </Button>
-                { (result || isLoading) && <Button type="button" variant="outline" onClick={handleReset} disabled={isLoading}>Verify Another</Button> }
+                { (result || isLoading) && <Button type="button" onClick={handleReset} disabled={isLoading}>Verify Another</Button> }
             </div>
           </form>
         </CardContent>
