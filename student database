@@ -1,0 +1,11 @@
+CREATE DATABASE studentdb;
+USE studentdb;
+CREATE TABLE IF NOT EXISTS students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(200) NOT NULL,
+    roll_number VARCHAR(100) NOT NULL UNIQUE,
+    degree_hash CHAR(64) NOT NULL UNIQUE,   -- SHA-256 hex string
+    degree_pdf LONGBLOB NOT NULL,           -- store PDF binary directly
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+SELECT * FROM students;
